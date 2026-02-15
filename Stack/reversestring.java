@@ -1,0 +1,21 @@
+import java.util.*;
+public class reversestring {
+    public static void reverseString(String str){
+        Stack<Character> s = new Stack<>();
+        int idx = 0;
+        while(idx < str.length()){
+            s.push(str.charAt(idx));
+            idx++;
+        }
+        StringBuilder result = new StringBuilder();
+        while(!s.isEmpty()){
+            result.append(s.peek());
+            s.pop();
+        }
+        System.out.println(result.toString());
+    }
+    public static void main(String[] args) {
+        String str = "Hello World";
+        reverseString(str);
+    }
+}
